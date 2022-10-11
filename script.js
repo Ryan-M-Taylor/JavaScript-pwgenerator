@@ -56,7 +56,6 @@ function generatePassword() {
     console.log(passwordBase);
   }
 
- 
   for (var i = 0; i < charLength; i++) {
     finalPassword += passwordBase.charAt(
       Math.floor(Math.random() * passwordBase.length)
