@@ -8,6 +8,7 @@ var special = "!@#$%^&*()_+=-";
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log (password)
   var passwordText = document.querySelector("#password");
   console.log(passwordText);
   passwordText.value = password;
@@ -56,10 +57,11 @@ function generatePassword() {
     console.log(passwordBase);
   }
 
-  if (userWantsNumbers === false && userWantsLower === false && userWantsUpper === false && userWantsSpecial ===false)
+  if (userWantsNumbers === false && userWantsLower === false && userWantsUpper === false && userWantsSpecial ===false){
   alert("You must choose at least one criteria")
-  generatePassword()
-  
+  return generatePassword();
+  } 
+
   for (var i = 0; i < charLength; i++) {
     finalPassword += passwordBase.charAt(
       Math.floor(Math.random() * passwordBase.length)
