@@ -60,7 +60,9 @@ function generatePassword() {
   if (userWantsNumbers === false && userWantsLower === false && userWantsUpper === false && userWantsSpecial ===false){
   alert("You must choose at least one criteria")
   return generatePassword();
-  } 
+  } else {
+    alert("You have successfully created a password")
+  }
 
   for (var i = 0; i < charLength; i++) {
     finalPassword += passwordBase.charAt(
