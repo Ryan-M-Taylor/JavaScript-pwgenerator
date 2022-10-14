@@ -56,6 +56,10 @@ function generatePassword() {
     console.log(passwordBase);
   }
 
+  if (userWantsNumbers === false && userWantsLower === false && userWantsUpper === false && userWantsSpecial ===false)
+  alert("You must choose at least one criteria")
+  generatePassword()
+  
   for (var i = 0; i < charLength; i++) {
     finalPassword += passwordBase.charAt(
       Math.floor(Math.random() * passwordBase.length)
